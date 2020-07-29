@@ -1,8 +1,10 @@
+const path = require('path')
 const autoprefixer = require('autoprefixer');
 const pxtorem = require('postcss-pxtorem');
 module.exports = {
   outputDir: 'dist',
   publicPath: process.env.NODE_ENV === 'production' ? '/vant-demo/' : '/',
+
   css: {
     loaderOptions: {
       postcss: {
@@ -23,6 +25,15 @@ module.exports = {
           })
         ]
       }
+    }
+  },
+
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: [
+        path.resolve(__dirname, "./src/assets/less/init/variable.less")
+      ]
     }
   }
 };

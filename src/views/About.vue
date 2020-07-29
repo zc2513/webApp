@@ -58,7 +58,7 @@
       </ul>
     </div>
     <div>
-      <h4>浏览器默认样式重置</h4>
+      <h4>浏览器默认样式重置及全局less变量配置</h4>
       <ul>
         <li>第三方依赖：normalize.css</li>
         <li>下载命令：yarn add normalize.css -S || npm i normalize.css -S</li>
@@ -74,6 +74,44 @@
           <p>2.一般化的样式：为大部分HTML元素提供</p>
           <p>3.修复浏览器自身的bug并保证各浏览器的一致性</p>
           <p>4.优化CSS可用性：用一些小技巧</p>
+        </li>
+      </ul>
+      <h6>vue-cli3 配置全局less 、sass 变量</h6>
+      <ul>
+          <li>命令：vue add style-resources-loader</li>
+          <li>vue.config.js 配置 less：   
+            const path = require("path");
+            module.exports = {
+                ...
+                pluginOptions: {
+                    "style-resources-loader": {
+                        preProcessor: "less",
+                        patterns: [
+                        //这个是加上自己的路径，
+                        //注意：试过不能使用别名路径
+                        path.resolve(__dirname, "./src/assets/variable.less")
+                        ]
+                    }
+                }
+                ...
+            }
+        </li>
+        <li>
+            vue.config.js 配置 scss:
+              module.exports = {
+                ...
+                css: {
+                    loaderOptions: {
+                        sass: {
+                        // @是src的别名
+                        data: `
+                            @import "@/assets/variable.scss";
+                        `
+                        }
+                    }
+                }
+                ...
+            }
         </li>
       </ul>
     </div>
@@ -93,6 +131,7 @@ export default {};
   }
   p {
     text-indent: 4rem;
+    color: @blue;
   }
 }
 </style>
