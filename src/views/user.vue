@@ -1,22 +1,21 @@
 <template>
   <div>
-    <img class="user-poster" src="https://img.yzcdn.cn/public_files/2017/10/23/8690bb321356070e0b8c4404d087f8fd.png">
+    <img
+      class="user-poster"
+      src="https://img.yzcdn.cn/public_files/2017/10/23/8690bb321356070e0b8c4404d087f8fd.png"
+    />
     <van-row class="user-links">
       <van-col span="6">
-        <van-icon name="pending-payment" />
-        待付款
+        <van-icon name="pending-payment" />待付款
       </van-col>
       <van-col span="6">
-        <van-icon name="records" />
-        待接单
+        <van-icon name="records" />待接单
       </van-col>
       <van-col span="6">
-        <van-icon name="tosend" />
-        待发货
+        <van-icon name="tosend" />待发货
       </van-col>
       <van-col span="6">
-        <van-icon name="logistics" />
-        已发货
+        <van-icon name="logistics" />已发货
       </van-col>
     </van-row>
 
@@ -33,7 +32,7 @@
 </template>
 
 <script>
-import { Row, Col, Icon, Cell, CellGroup } from 'vant';
+import { Row, Col, Icon, Cell, CellGroup } from "vant";
 
 export default {
   components: {
@@ -41,8 +40,8 @@ export default {
     [Col.name]: Col,
     [Icon.name]: Icon,
     [Cell.name]: Cell,
-    [CellGroup.name]: CellGroup
-  }
+    [CellGroup.name]: CellGroup,
+  },
 };
 </script>
 
