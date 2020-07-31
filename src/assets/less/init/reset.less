@@ -1,1 +1,16 @@
-// 标签样式重置
+// 全局标签样式重置
+
+/* a标签样式重置
+* 1.去除ios input框点击时的灰色背景
+* 2.去除触发touchstart的时候，a标签灰色的背景
+* 3.去除a标签在移动端点击时的蓝色
+*/
+a,a:hover,a:active,a:visited,a:link,a:focus{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    -moz-user-focus: none;
+    -moz-user-select: none;
+    outline:none;
+    background: none;
+    text-decoration: none;
+}

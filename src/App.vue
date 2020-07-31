@@ -1,30 +1,35 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">首页</router-link>
-      <router-link to="/about">关于配置</router-link>
-      <router-link to="/shop">购买</router-link>
-      <router-link to="/user">个人中心</router-link>
-    </div>
+  <div id="app"> 
     <router-view />
+
+    <van-tabbar route fixed placeholder >
+        <van-tabbar-item replace icon="home-o" to="/home">
+            首页
+        </van-tabbar-item>
+        <van-tabbar-item replace icon="search" to="/about">
+            关于配置
+        </van-tabbar-item>
+        <van-tabbar-item replace icon="friends-o" to="/shop">
+            购买
+        </van-tabbar-item>
+        <van-tabbar-item replace icon="setting-o" to="/user">
+            个人中心
+        </van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
-<style lang="less">
-@import "./assets/less/index";
-#nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 40px;
-  background-color: rgba(0, 0, 0, 0.2);
-  a {
-    width: calc(100% / 4px);
-    color: #9d9da7;
-    &.router-link-exact-active {
-      font-weight: bold;
-      color: #fff;
-    }
-  }
+<script>
+import { Tabbar, TabbarItem } from 'vant';
+export default {
+  components: {
+    [Tabbar.name]: Tabbar,
+    [TabbarItem.name]: TabbarItem 
+  } 
 }
+</script>
+
+
+<style lang="less">
+@import "./assets/less/index";  
 </style>

@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import 'normalize.css';
-import './utils/rem'
+import './global/rem'
 
 Vue.config.productionTip = false
 

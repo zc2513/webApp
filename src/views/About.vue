@@ -64,10 +64,10 @@
         <li>下载命令：yarn add normalize.css -S || npm i normalize.css -S</li>
         <li>npm形式项目使用：入口文件 import 'normalize.css';</li>
         <li>
-          cdn引入： https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css
+          cdn引入：注释
           <!-- <link href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"> -->
         </li>
-        <li>下载地址： https://necolas.github.io/normalize.css/latest/normalize.css</li>
+        <li>下载地址：注释 <!-- https://necolas.github.io/normalize.css/latest/normalize.css --></li>
         <li>
           <h6>normalize特点:</h6>
           <p>1.保护有用的浏览器默认样式而不是完全去掉它们</p>
@@ -118,7 +118,7 @@
   </div>
 </template>
 <script>
-export default {};
+export default { };
 </script>
 <style lang="less">
 .about {
